@@ -22,13 +22,43 @@ Public Class ResCre
         Dim smaller_font As iTextSharp.text.Font = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 10, iTextSharp.text.Font.NORMAL)
         Dim space_font As iTextSharp.text.Font = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 5, iTextSharp.text.Font.NORMAL)
         Dim normal_bold As iTextSharp.text.Font = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 12, iTextSharp.text.Font.ITALIC)
+        Dim break As New LineSeparator(3.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_CENTER, 1)
+        Dim space As New Paragraph("")
 
-        Dim Fname As New Paragraph(jsonoutp.FullName)
+        Dim Fname As New Paragraph(jsonoutp.FullName & vbLf, main_font)
         Dim Scourse As New Paragraph(jsonoutp.Course)
+        Dim Add As New Paragraph(jsonoutp.Address)
+        Dim PhNumber As New Paragraph(jsonoutp.PhoneNumber)
+        Dim EAdd As New Paragraph(jsonoutp.EmailAdd)
+        Dim AbInfo As New Paragraph(jsonoutp.AboutInfo)
+        Dim EdHead As New Paragraph(jsonoutp.EducHead)
+        Dim Syear As New Paragraph(jsonoutp.Cyear)
+        Dim Sschool As New Paragraph(jsonoutp.Cschool)
+        Dim HighSc As New Paragraph(jsonoutp.HS)
+        Dim Hyear As New Paragraph(jsonoutp.HSyear)
+        Dim Hschoool As New Paragraph(jsonoutp.HSschool)
+        Dim SHead As New Paragraph(jsonoutp.SkillHead)
+        Dim S1 As New Paragraph(jsonoutp.Skill1)
+        Dim S2 As New Paragraph(jsonoutp.Skill2)
+        Dim S3 As New Paragraph(jsonoutp.Skill3)
 
         ResCrePDF.Open()
         ResCrePDF.Add(Fname)
         ResCrePDF.Add(Scourse)
+        ResCrePDF.Add(Add)
+        ResCrePDF.Add(PhNumber)
+        ResCrePDF.Add(EAdd)
+        ResCrePDF.Add(AbInfo)
+        ResCrePDF.Add(EdHead)
+        ResCrePDF.Add(Syear)
+        ResCrePDF.Add(Sschool)
+        ResCrePDF.Add(HighSc)
+        ResCrePDF.Add(Hyear)
+        ResCrePDF.Add(Hschoool)
+        ResCrePDF.Add(SHead)
+        ResCrePDF.Add(S1)
+        ResCrePDF.Add(S2)
+        ResCrePDF.Add(S3)
         ResCrePDF.Close()
 
 
@@ -38,7 +68,20 @@ Public Class ResCre
 
         Public Property FullName As String
         Public Property Course As String
-
+        Public Property Address As String
+        Public Property PhoneNumber As String
+        Public Property EmailAdd As String
+        Public Property AboutInfo As String
+        Public Property EducHead As String
+        Public Property Cyear As String
+        Public Property Cschool As String
+        Public Property HS As String
+        Public Property HSyear As String
+        Public Property HSschool As String
+        Public Property SkillHead As String
+        Public Property Skill1 As String
+        Public Property Skill2 As String
+        Public Property Skill3 As String
 
     End Class
 
