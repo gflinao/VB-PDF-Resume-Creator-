@@ -71,6 +71,8 @@ Public Class ResCre
         ResCrePDF.Add(S1)
         ResCrePDF.Add(S2)
         ResCrePDF.Add(S3)
+
+        MessageBox.Show("Created Successfully!")
         ResCrePDF.Close()
 
 
@@ -99,6 +101,15 @@ Public Class ResCre
     End Class
 
     Private Sub ResCre_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+    End Sub
+
+    Private Sub BtnExt_Click(sender As Object, e As EventArgs) Handles BtnExt.Click
+
+        Dim AppExit As DialogResult = MessageBox.Show("Do you want exit Application?", "Resume Creator", MessageBoxButtons.YesNo, MessageBoxIcon.Information)
+        If AppExit = DialogResult.Yes Then
+            Application.Exit()
+        End If
 
     End Sub
 End Class

@@ -66,3 +66,8 @@ C:\Users\admin\source\repos\PDF Resume Creator VB\PDF Resume Creator VB\obj\Debu
 C:\Users\admin\source\repos\PDF Resume Creator VB\PDF Resume Creator VB\obj\Debug\PDF Resume Creator VB.exe
 C:\Users\admin\source\repos\PDF Resume Creator VB\PDF Resume Creator VB\obj\Debug\PDF Resume Creator VB.xml
 C:\Users\admin\source\repos\PDF Resume Creator VB\PDF Resume Creator VB\obj\Debug\PDF Resume Creator VB.pdb
+C:\Users\admin\source\repos\PDF Resume Creator VB\PDF Resume Creator VB\bin\Debug\Interop.AcroPDFLib.dll
+C:\Users\admin\source\repos\PDF Resume Creator VB\PDF Resume Creator VB\bin\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\admin\source\repos\PDF Resume Creator VB\PDF Resume Creator VB\obj\Debug\Interop.AcroPDFLib.dll
+C:\Users\admin\source\repos\PDF Resume Creator VB\PDF Resume Creator VB\obj\Debug\AxInterop.AcroPDFLib.dll
+C:\Users\admin\source\repos\PDF Resume Creator VB\PDF Resume Creator VB\obj\Debug\PDF Resume Creator VB.vbproj.ResolveComReference.cache

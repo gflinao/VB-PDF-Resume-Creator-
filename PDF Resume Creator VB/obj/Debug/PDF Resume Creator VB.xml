@@ -22,5 +22,10 @@ PDF Resume Creator VB
   resource lookups using this strongly typed resource class.
 </summary>
 </member>
+<member name="P:PDF_Resume_Creator_VB.My.Resources.Resources.bgres">
+<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member>
 </members>
 </doc>
