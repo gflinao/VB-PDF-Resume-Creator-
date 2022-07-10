@@ -23,38 +23,50 @@ Public Class ResCre
         Dim space_font As iTextSharp.text.Font = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 5, iTextSharp.text.Font.NORMAL)
         Dim normal_bold As iTextSharp.text.Font = FontFactory.GetFont(iTextSharp.text.Font.FontFamily.TIMES_ROMAN.ToString(), 12, iTextSharp.text.Font.ITALIC)
         Dim break As New LineSeparator(3.0F, 100.0F, BaseColor.BLACK, Element.ALIGN_CENTER, 1)
-        Dim space As New Paragraph("")
+        Dim space As New Paragraph(" ")
 
         Dim Fname As New Paragraph(jsonoutp.FullName & vbLf, main_font)
-        Dim Scourse As New Paragraph(jsonoutp.Course)
+        Dim Scourse As New Paragraph(jsonoutp.Course & vbLf, normal_font)
         Dim Add As New Paragraph(jsonoutp.Address)
         Dim PhNumber As New Paragraph(jsonoutp.PhoneNumber)
         Dim EAdd As New Paragraph(jsonoutp.EmailAdd)
+        Dim AbHead As New Paragraph(jsonoutp.AboutHead & vbLf, lessmain_font)
         Dim AbInfo As New Paragraph(jsonoutp.AboutInfo)
-        Dim EdHead As New Paragraph(jsonoutp.EducHead)
+        Dim EdHead As New Paragraph(jsonoutp.EducHead & vbLf, lessmain_font)
         Dim Syear As New Paragraph(jsonoutp.Cyear)
         Dim Sschool As New Paragraph(jsonoutp.Cschool)
-        Dim HighSc As New Paragraph(jsonoutp.HS)
+        Dim HighSc As New Paragraph(jsonoutp.HS & vbLf, normal_font)
         Dim Hyear As New Paragraph(jsonoutp.HSyear)
-        Dim Hschoool As New Paragraph(jsonoutp.HSschool)
-        Dim SHead As New Paragraph(jsonoutp.SkillHead)
+        Dim Hschool As New Paragraph(jsonoutp.HSschool)
+        Dim SHead As New Paragraph(jsonoutp.SkillHead & vbLf, lessmain_font)
         Dim S1 As New Paragraph(jsonoutp.Skill1)
         Dim S2 As New Paragraph(jsonoutp.Skill2)
         Dim S3 As New Paragraph(jsonoutp.Skill3)
 
         ResCrePDF.Open()
         ResCrePDF.Add(Fname)
-        ResCrePDF.Add(Scourse)
         ResCrePDF.Add(Add)
         ResCrePDF.Add(PhNumber)
         ResCrePDF.Add(EAdd)
+        ResCrePDF.Add(space)
+        ResCrePDF.Add(break)
+
+        ResCrePDF.Add(AbHead)
         ResCrePDF.Add(AbInfo)
+        ResCrePDF.Add(space)
+        ResCrePDF.Add(break)
+
         ResCrePDF.Add(EdHead)
+        ResCrePDF.Add(Scourse)
         ResCrePDF.Add(Syear)
         ResCrePDF.Add(Sschool)
+        ResCrePDF.Add(space)
         ResCrePDF.Add(HighSc)
         ResCrePDF.Add(Hyear)
-        ResCrePDF.Add(Hschoool)
+        ResCrePDF.Add(Hschool)
+        ResCrePDF.Add(space)
+        ResCrePDF.Add(break)
+
         ResCrePDF.Add(SHead)
         ResCrePDF.Add(S1)
         ResCrePDF.Add(S2)
@@ -71,6 +83,7 @@ Public Class ResCre
         Public Property Address As String
         Public Property PhoneNumber As String
         Public Property EmailAdd As String
+        Public Property AboutHead As String
         Public Property AboutInfo As String
         Public Property EducHead As String
         Public Property Cyear As String
